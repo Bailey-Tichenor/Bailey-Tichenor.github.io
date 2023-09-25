@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bailey's CSS Loading Animation</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* This centers vertically */
+        perspective: 1000px; /* Adjust the perspective depth */
+      }
+      .palm {
+        width: 100px;
+        height: 50px;
+        background-color:darksalmon;
+        border-radius: 50%;
+        position: absolute;
+        transform: translateY(20px);
+        
+      }
+      .thumb {
+        width: 65px;
+        height: 30px;
+        background-color: salmon;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(20px,35px) ;
+      }
+
+      
+
+      .animated-element {
+        width: 25px;
+        height: 50px;
+        background-color: lightsalmon;
+        border-radius: 45%;
+        margin-right: 2px;
+        animation: loading 1.5s linear 0s infinite;
+      }
+      
+        @keyframes loading {
+          0% {transform: translateY(25px)}
+          50% {transform: translateY(-25px)}
+          100% {transform: translateY(25px)}
+        }
+
+        .animated-element:nth-child(1) {
+          animation-delay: 0.8s;
+          
+        }
+        .animated-element:nth-child(2) {
+          animation-delay: 0.6s;
+          
+        }
+        .animated-element:nth-child(3) {
+          animation-delay: 0.4s;
+          
+        }
+        .animated-element:nth-child(4) {
+          animation-delay: 0.2s;
+          
+        }
+        
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align:center;font-family:sans-serif;">CSS Loading Animation</h1>
+    <div class="container">
+             <!-- Put your divs here    -->
+             <div class="palm"></div>
+             <div class="thumb"></div>
+             <div class="animated-element"></div>
+             <div class="animated-element"></div>
+             <div class="animated-element"></div>
+             <div class="animated-element"></div>
+             
+    </div>
+  </body>
+</html>
