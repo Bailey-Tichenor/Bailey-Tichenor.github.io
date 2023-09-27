@@ -12,6 +12,16 @@
         height: 100vh; /* This centers vertically */
         perspective: 1000px; /* Adjust the perspective depth */
       }
+        .arm {
+        width: 65px;
+        height: 250px;
+        background: rgb(243, 152, 107);
+background: linear-gradient(25deg, rgb(243, 152, 107) 0%, rgba(237, 167, 129, 0.842) 58%, rgba(255,121,0,0) 100%);
+        border-radius: 50%;
+        position: absolute;
+        transform: rotate(25deg) translate(20px,-80px);
+        }
+
       .palm {
         width: 100px;
         height: 50px;
@@ -24,13 +34,11 @@
       .thumb {
         width: 65px;
         height: 30px;
-        background-color: salmon;
+        background-color: lightsalmon;
         border-radius: 50%;
         position: absolute;
-        transform: translate(20px,35px) ;
+        transform: translate(20px,40px) ;
       }
-
-      
 
       .animated-element {
         width: 25px;
@@ -47,22 +55,18 @@
           100% {transform: translateY(25px)}
         }
 
-        .animated-element:nth-child(1) {
-          animation-delay: 0.8s;
-          
-        }
-        .animated-element:nth-child(2) {
-          animation-delay: 0.6s;
-          
-        }
-        .animated-element:nth-child(3) {
-          animation-delay: 0.4s;
-          
-        }
-        .animated-element:nth-child(4) {
-          animation-delay: 0.2s;
-          
-        }
+.animated-element:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.animated-element:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.animated-element:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.animated-element:nth-child(5) {
+  animation-delay: 0.2s;
+}
         
     </style>
   </head>
@@ -70,12 +74,14 @@
     <h1 style="text-align:center;font-family:sans-serif;">CSS Loading Animation</h1>
     <div class="container">
              <!-- Put your divs here    -->
+             <div class="arm"></div>
              <div class="palm"></div>
              <div class="thumb"></div>
              <div class="animated-element"></div>
              <div class="animated-element"></div>
              <div class="animated-element"></div>
              <div class="animated-element"></div>
+             
              
     </div>
   </body>
