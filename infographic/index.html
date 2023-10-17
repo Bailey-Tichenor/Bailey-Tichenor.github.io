@@ -167,7 +167,26 @@
         <!-- Paste your SVG here... -->
     
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332.74 506.45">
+  <script>
+
+    // Get references to the menu elements
+    const button = document.querySelector('#icon-03');
+    const elementToAnimate = document.querySelector('#data-03');
     
+    // Event listener for the menu toggle button
+    
+    button.addEventListener('click', () => {
+        const isActive = elementToAnimate.classList.contains("active");
+        if (!isActive) {
+            elementToAnimate.classList.add("active");
+        } 
+        else {
+          elementToAnimate.classList.remove("active")
+        }
+    });
+    
+     
+        </script>
   <defs>
     
     <style>
@@ -1046,26 +1065,7 @@
   
 </svg>
 
-<script>
 
-  // Get references to the menu elements
-  const button = document.querySelector('#icon-03');
-  const elementToAnimate = document.querySelector('#data-03');
-  
-  // Event listener for the menu toggle button
-  
-  button.addEventListener('click', () => {
-      const isActive = elementToAnimate.classList.contains("active");
-      if (!isActive) {
-          elementToAnimate.classList.add("active");
-      } 
-      else {
-        elementToAnimate.classList.remove("active")
-      }
-  });
-  
-   
-      </script>
 
       </div>
     </div>
