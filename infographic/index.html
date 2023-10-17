@@ -12,7 +12,7 @@
       }
     
 
-      [id^="shadow"]:hover {
+      #data-01:hover > #shadow-01{
 	/* Default state for all elements whose id contains "shadow" */
         transform-origin: 0% ;
         transform-box: fill-box;
@@ -21,33 +21,89 @@
       }
       
 
-      [id^="bar"]:hover
+      #data-01:hover > #bar-01
       {
         transform-origin: 0% ;
         transform-box: fill-box;
         animation: hovering 2s ease-in-out 0s infinite ;
     }
 
-    [id^="arrows"]:hover {
+    #data-01:hover > #arrows-01 {
         transform-origin: 0% ;
         transform-box: fill-box;
         animation: hovering-arrow 2s ease-in-out 1s infinite ;
       }
 
-      #data-02:target > #bar-02 {
-    transform: scaleX(1);
-    transition: all 1s linear;
+      #data-02:hover > #shadow-02{
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        opacity: 0%;
+        animation: hovering-shadow 2s ease-in-out 0s infinite
+      }
+      #data-02:hover > #bar-02
+      {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering 2s ease-in-out 0s infinite ;
     }
-    #data-02:target > #shadow-02 {
-    transform: scaleX(1);
-    transition: all 1s linear;
+    #data-02:hover > #arrows-02 {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering-arrow 2s ease-in-out 1s infinite ;
+      }
+      #data-03:hover > #shadow-03{
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        opacity: 0%;
+        animation: hovering-shadow 2s ease-in-out 0s infinite
+      }
+      #data-03:hover > #bar-03
+      {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering 2s ease-in-out 0s infinite ;
     }
-    #data-02:target > #arrows-02 {
-    transform: scaleX(1);
-    transition: all 1s linear;
-    } 
+    #data-03:hover > #arrows-03 {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering-arrow 2s ease-in-out 1s infinite ;
+      }
 
-    @keyframes hovering {
+      #data-04:hover > #shadow-04{
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        opacity: 0%;
+        animation: hovering-shadow 2s ease-in-out 0s infinite
+      }
+      #data-04:hover > #bar-04
+      {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering 2s ease-in-out 0s infinite ;
+    }
+    #data-04:hover > #arrows-04 {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering-arrow 2s ease-in-out 1s infinite ;
+      }
+      #data-05:hover > #shadow-05{
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        opacity: 0%;
+        animation: hovering-shadow 2s ease-in-out 0s infinite
+      }
+      #data-05:hover > #bar-05
+      {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering 2s ease-in-out 0s infinite ;
+    }
+    #data-05:hover > #arrows-05 {
+        transform-origin: 0% ;
+        transform-box: fill-box;
+        animation: hovering-arrow 2s ease-in-out 1s infinite ;
+      }
+      @keyframes hovering {
         0% {transform: scaleX(0);}
         100% {transform: scaleX(1);}
       }
@@ -61,6 +117,18 @@
         0% {opactiy: 0%;}
         100% {opacity: 100%;}
       }
+
+      #data-02:target > #bar-02 {
+    transform: scaleX(1);
+    }
+    #data-02:target > #shadow-02 {
+    transform: scaleX(1);
+    }
+    #data-02:target > #arrows-02 {
+    transform: scaleX(1);
+    } 
+
+    
       
     </style>
   </head>
