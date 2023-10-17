@@ -141,46 +141,25 @@
 
   /*// Event listener for the menu toggle button*/
 
-   #data-03.active > #shadow-03{
+   #data-03.active #shadow-03{
    transform-origin: 0% ;
     transform-box: fill-box;
     opacity: 0%;
     animation: hovering-shadow 2s ease-in-out 0s infinite
   }
-  #data-03.active > #bar-03
-  {
+  #data-03.active #bar-03 {
    transform-origin: 0% ;
     transform-box: fill-box;
     animation: hovering 2s ease-in-out 0s infinite ;
 }
-#data-03.active > #arrows-03 {
+  #data-03.active #arrows-03 {
     transform-origin: 0% ;
     transform-box: fill-box;
    animation: hovering-arrow 2s ease-in-out 1s infinite ;
   }
-
-
     </style>
 
-    <script>
-
-// Get references to the menu elements
-const button = document.querySelector('#icon-03');
-const elementToAnimate = document.querySelector('#data-03');
-
-// Event listener for the menu toggle button
-button.addEventListener('click', () => {
-    const isActive = elementToAnimate.classList.contains("active");
-    if (!isActive) {
-        elementToAnimate.classList.add("active");
-    } 
-    else {
-      elementToAnimate.classList.remove("active")
-    }
-});
-
- 
-    </script>
+    
 
   </head>
   <body>
@@ -188,7 +167,9 @@ button.addEventListener('click', () => {
         <!-- Paste your SVG here... -->
     
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332.74 506.45">
+    
   <defs>
+    
     <style>
       .cls-1 {
         opacity: .2;
@@ -1062,7 +1043,30 @@ button.addEventListener('click', () => {
       <polygon class="cls-10" points="35.25 93.76 33.16 93.76 33.16 85.89 28.97 95.07 31.07 95.07 31.07 102.95 35.25 93.76"/>
     </g>
   </g>
+  
 </svg>
+
+<script>
+
+  // Get references to the menu elements
+  const button = document.querySelector('#icon-03');
+  const elementToAnimate = document.querySelector('#data-03');
+  
+  // Event listener for the menu toggle button
+  
+  button.addEventListener('click', () => {
+      const isActive = elementToAnimate.classList.contains("active");
+      if (!isActive) {
+          elementToAnimate.classList.add("active");
+      } 
+      else {
+        elementToAnimate.classList.remove("active")
+      }
+  });
+  
+   
+      </script>
+
       </div>
     </div>
   </body>
