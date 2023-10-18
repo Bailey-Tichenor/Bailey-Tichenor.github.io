@@ -169,24 +169,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332.74 506.45">
   <script>
 
-    // Get references to the menu elements
-    const button = document.querySelector('#icon-03');
-    const elementToAnimate = document.querySelector('#data-03');
+const button = document.querySelector('.menu-toggle');
+const elementToAnimate = document.querySelector('.sidebar');
+
+
+button.addEventListener('click', () => {
+    const isActive = elementToAnimate.classList.contains("active")
     
-    // Event listener for the menu toggle button
+    if (!isActive) { 
+      // Add a class that tells CSS that the element is active
+      elementToAnimate.classList.add("active")
+    } else {
+      elementToAnimate.classList.remove("active")
+    }
+});
     
-    button.addEventListener('click', () => {
-        const isActive = elementToAnimate.classList.contains("active");
-        if (!isActive) {
-            elementToAnimate.classList.add("active");
-        } 
-        else {
-          elementToAnimate.classList.remove("active")
-        }
+
+    $(window).scroll(function(){
+        
+        $('.animatediv').each(function (i) {
+            // foreach el w .animatediv
+                                    //this el
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            var top_of_window = $(window).scrollTop();
+            var top_of_object = $(this).position().top;
+           
+            if (bottom_of_window > bottom_of_object && top_of_window < top_of_object) {
+                $('.star', this).css("animation-play-state", "running")
+            }
+            
+            else {
+                $('.star', this).css("animation-play-state", "paused")
+            }
+            
+        });
     });
-    
      
-        </script>
+  </script>
   <defs>
     
     <style>
